@@ -1,3 +1,3 @@
 # seallama
 
-Put your info and documentation here
+Initial Setup
