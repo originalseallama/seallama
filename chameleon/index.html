@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app" class="container">
+        <button v-on:click="startRound">Start New Round</button>
+        <div class="row">
+            <div class="col-10">
+                
+                <div class="row justify-content-md-center">
+                    <h2>{{ coordinates }}</h2>
+                    <div class="col-8">
+                        <img style="width:100%;" v-bind:src="'images/categories/' + categoryCardNumber + '.jpg'">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2" v-for="player in players">
+                        <div class="card">
+                            <div class="card-body">
+                              {{ player.name }}
+                              <h6 v-if="player.isChameleon">
+                                  CHAMELEON
+                              </h6>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card">
+                            <div class="card-body">
+                              <input v-model="newPlayer" placeholder="New Player Name">
+                              <button v-on:click="addNewPlayer">Add New Player</button>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                chat area
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
