@@ -1,3 +1,2 @@
 # seallama
 
-Initial Setup
