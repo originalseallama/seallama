@@ -5,15 +5,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="app" class="container">
+        <h1>{{ message }}</h1>
         <button v-on:click="startRound">Start New Round</button>
         <div class="row">
             <div class="col-10">
-                
                 <div class="row justify-content-md-center">
                     <h2>{{ coordinates }}</h2>
                     <div class="col-8">
@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-2" v-for="player in players">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body" class="players">
                               {{ player.name }}
                               <h6 v-if="player.isChameleon">
                                   CHAMELEON

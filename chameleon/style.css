@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(0, 89, 4);
+    border-style: inset;
+    border-width : 3px;
+    border-color: rgb(0, 40, 40);
+    border-radius : 100px;
+    margin: 30px;
+    padding: 10px;
+}
+
+h2 {
+    border-style : solid;
+    border-color : rgb(138, 55, 0);
+    border-radius : 7px ;
+    border-width : 1px;
+    border-bottom-width : 2.3px;
+    padding : 0px;
+
+}
+
+.players {
+    background-color : rgb(5,5,60);
+}

@@ -2,6 +2,7 @@ console.log("App.js is running");
 var app = new Vue({
     el: '#app',
     data: {
+        message: "",
         players: [
              {
                  name: "Micah",
@@ -59,7 +60,12 @@ var app = new Vue({
         getRandomIntInclusive: function (min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+            return Math.floor(Math.random() * (max - min + 1) + min);
         }
-    }
+    },
+    mounted () {
+        axios
+          .get('https://baj9c9vabc.execute-api.us-west-2.amazonaws.com/chameleon')
+          .then(response => (this.message = response.data))
+      }
 })
